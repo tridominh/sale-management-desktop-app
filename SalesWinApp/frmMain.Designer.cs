@@ -32,20 +32,8 @@
             fileToolStripMenuItem = new ToolStripMenuItem();
             closeToolStripMenuItem = new ToolStripMenuItem();
             ordersToolStripMenuItem1 = new ToolStripMenuItem();
-            createToolStripMenuItem1 = new ToolStripMenuItem();
-            viewAllToolStripMenuItem1 = new ToolStripMenuItem();
-            updateToolStripMenuItem = new ToolStripMenuItem();
-            deleteToolStripMenuItem1 = new ToolStripMenuItem();
             productsToolStripMenuItem1 = new ToolStripMenuItem();
-            createToolStripMenuItem2 = new ToolStripMenuItem();
-            viewAllToolStripMenuItem2 = new ToolStripMenuItem();
-            updateToolStripMenuItem2 = new ToolStripMenuItem();
-            deleteToolStripMenuItem2 = new ToolStripMenuItem();
             membersToolStripMenuItem1 = new ToolStripMenuItem();
-            createToolStripMenuItem3 = new ToolStripMenuItem();
-            viewAllToolStripMenuItem3 = new ToolStripMenuItem();
-            updateToolStripMenuItem3 = new ToolStripMenuItem();
-            deleteToolStripMenuItem3 = new ToolStripMenuItem();
             salesToolStripMenuItem1 = new ToolStripMenuItem();
             viewReportsToolStripMenuItem = new ToolStripMenuItem();
             profileToolStripMenuItem = new ToolStripMenuItem();
@@ -83,99 +71,24 @@
             // 
             // ordersToolStripMenuItem1
             // 
-            ordersToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { createToolStripMenuItem1, viewAllToolStripMenuItem1, updateToolStripMenuItem, deleteToolStripMenuItem1 });
             ordersToolStripMenuItem1.Name = "ordersToolStripMenuItem1";
             ordersToolStripMenuItem1.Size = new Size(67, 24);
             ordersToolStripMenuItem1.Text = "Orders";
-            // 
-            // createToolStripMenuItem1
-            // 
-            createToolStripMenuItem1.Name = "createToolStripMenuItem1";
-            createToolStripMenuItem1.Size = new Size(146, 26);
-            createToolStripMenuItem1.Text = "Create";
-            // 
-            // viewAllToolStripMenuItem1
-            // 
-            viewAllToolStripMenuItem1.Name = "viewAllToolStripMenuItem1";
-            viewAllToolStripMenuItem1.Size = new Size(146, 26);
-            viewAllToolStripMenuItem1.Text = "View All";
-            viewAllToolStripMenuItem1.Click += viewAllToolStripMenuItem1_Click;
-            // 
-            // updateToolStripMenuItem
-            // 
-            updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            updateToolStripMenuItem.Size = new Size(146, 26);
-            updateToolStripMenuItem.Text = "Update";
-            // 
-            // deleteToolStripMenuItem1
-            // 
-            deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
-            deleteToolStripMenuItem1.Size = new Size(146, 26);
-            deleteToolStripMenuItem1.Text = "Delete";
+            ordersToolStripMenuItem1.Click += ordersToolStripMenuItem1_Click;
             // 
             // productsToolStripMenuItem1
             // 
-            productsToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { createToolStripMenuItem2, viewAllToolStripMenuItem2, updateToolStripMenuItem2, deleteToolStripMenuItem2 });
             productsToolStripMenuItem1.Name = "productsToolStripMenuItem1";
             productsToolStripMenuItem1.Size = new Size(80, 24);
             productsToolStripMenuItem1.Text = "Products";
-            // 
-            // createToolStripMenuItem2
-            // 
-            createToolStripMenuItem2.Name = "createToolStripMenuItem2";
-            createToolStripMenuItem2.Size = new Size(144, 26);
-            createToolStripMenuItem2.Text = "Create";
-            // 
-            // viewAllToolStripMenuItem2
-            // 
-            viewAllToolStripMenuItem2.Name = "viewAllToolStripMenuItem2";
-            viewAllToolStripMenuItem2.Size = new Size(144, 26);
-            viewAllToolStripMenuItem2.Text = "View all";
-            viewAllToolStripMenuItem2.Click += viewAllToolStripMenuItem2_Click;
-            // 
-            // updateToolStripMenuItem2
-            // 
-            updateToolStripMenuItem2.Name = "updateToolStripMenuItem2";
-            updateToolStripMenuItem2.Size = new Size(144, 26);
-            updateToolStripMenuItem2.Text = "Update";
-            // 
-            // deleteToolStripMenuItem2
-            // 
-            deleteToolStripMenuItem2.Name = "deleteToolStripMenuItem2";
-            deleteToolStripMenuItem2.Size = new Size(144, 26);
-            deleteToolStripMenuItem2.Text = "Delete";
+            productsToolStripMenuItem1.Click += productsToolStripMenuItem1_Click;
             // 
             // membersToolStripMenuItem1
             // 
-            membersToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { createToolStripMenuItem3, viewAllToolStripMenuItem3, updateToolStripMenuItem3, deleteToolStripMenuItem3 });
             membersToolStripMenuItem1.Name = "membersToolStripMenuItem1";
             membersToolStripMenuItem1.Size = new Size(85, 24);
             membersToolStripMenuItem1.Text = "Members";
-            // 
-            // createToolStripMenuItem3
-            // 
-            createToolStripMenuItem3.Name = "createToolStripMenuItem3";
-            createToolStripMenuItem3.Size = new Size(144, 26);
-            createToolStripMenuItem3.Text = "Create";
-            // 
-            // viewAllToolStripMenuItem3
-            // 
-            viewAllToolStripMenuItem3.Name = "viewAllToolStripMenuItem3";
-            viewAllToolStripMenuItem3.Size = new Size(144, 26);
-            viewAllToolStripMenuItem3.Text = "View all";
-            viewAllToolStripMenuItem3.Click += viewAllToolStripMenuItem3_Click;
-            // 
-            // updateToolStripMenuItem3
-            // 
-            updateToolStripMenuItem3.Name = "updateToolStripMenuItem3";
-            updateToolStripMenuItem3.Size = new Size(144, 26);
-            updateToolStripMenuItem3.Text = "Update";
-            // 
-            // deleteToolStripMenuItem3
-            // 
-            deleteToolStripMenuItem3.Name = "deleteToolStripMenuItem3";
-            deleteToolStripMenuItem3.Size = new Size(144, 26);
-            deleteToolStripMenuItem3.Text = "Delete";
+            membersToolStripMenuItem1.Click += membersToolStripMenuItem1_Click;
             // 
             // salesToolStripMenuItem1
             // 
@@ -187,7 +100,7 @@
             // viewReportsToolStripMenuItem
             // 
             viewReportsToolStripMenuItem.Name = "viewReportsToolStripMenuItem";
-            viewReportsToolStripMenuItem.Size = new Size(224, 26);
+            viewReportsToolStripMenuItem.Size = new Size(175, 26);
             viewReportsToolStripMenuItem.Text = "View reports";
             // 
             // profileToolStripMenuItem
@@ -201,14 +114,16 @@
             // updateProfileToolStripMenuItem
             // 
             updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
-            updateProfileToolStripMenuItem.Size = new Size(224, 26);
+            updateProfileToolStripMenuItem.Size = new Size(188, 26);
             updateProfileToolStripMenuItem.Text = "Update Profile";
+            updateProfileToolStripMenuItem.Click += updateProfileToolStripMenuItem_Click;
             // 
             // logoutToolStripMenuItem
             // 
             logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            logoutToolStripMenuItem.Size = new Size(224, 26);
+            logoutToolStripMenuItem.Size = new Size(188, 26);
             logoutToolStripMenuItem.Text = "Logout";
+            logoutToolStripMenuItem.Click += logoutToolStripMenuItem_Click;
             // 
             // statusStrip1
             // 
@@ -236,6 +151,7 @@
             MainMenuStrip = menuStrip1;
             Name = "frmMain";
             Text = "Sales Management";
+            WindowState = FormWindowState.Maximized;
             Load += frmMain_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -253,20 +169,8 @@
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripDate;
         private ToolStripMenuItem ordersToolStripMenuItem1;
-        private ToolStripMenuItem createToolStripMenuItem1;
-        private ToolStripMenuItem viewAllToolStripMenuItem1;
-        private ToolStripMenuItem updateToolStripMenuItem;
-        private ToolStripMenuItem deleteToolStripMenuItem1;
         private ToolStripMenuItem productsToolStripMenuItem1;
-        private ToolStripMenuItem createToolStripMenuItem2;
-        private ToolStripMenuItem viewAllToolStripMenuItem2;
-        private ToolStripMenuItem updateToolStripMenuItem2;
-        private ToolStripMenuItem deleteToolStripMenuItem2;
         private ToolStripMenuItem membersToolStripMenuItem1;
-        private ToolStripMenuItem createToolStripMenuItem3;
-        private ToolStripMenuItem viewAllToolStripMenuItem3;
-        private ToolStripMenuItem updateToolStripMenuItem3;
-        private ToolStripMenuItem deleteToolStripMenuItem3;
         private ToolStripMenuItem salesToolStripMenuItem1;
         private ToolStripMenuItem viewReportsToolStripMenuItem;
         private ToolStripMenuItem profileToolStripMenuItem;

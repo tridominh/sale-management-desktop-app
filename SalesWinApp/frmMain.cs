@@ -6,6 +6,7 @@ namespace SalesWinApp
 {
     public partial class frmMain : Form
     {
+        public frmLogin login { get; set; }
         public int? Role { get; set; } = null;
         public Member? Member { get; set; } = null;
         public frmMain()
@@ -35,7 +36,12 @@ namespace SalesWinApp
             Dispose();
         }
 
-        private void viewAllToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void ordersToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmOrderView order = new()
             {
@@ -46,7 +52,7 @@ namespace SalesWinApp
             order.Show();
         }
 
-        private void viewAllToolStripMenuItem2_Click(object sender, EventArgs e)
+        private void productsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmProductView product = new()
             {
@@ -58,7 +64,7 @@ namespace SalesWinApp
             product.Show();
         }
 
-        private void viewAllToolStripMenuItem3_Click(object sender, EventArgs e)
+        private void membersToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmMemberView member = new()
             {
@@ -68,6 +74,22 @@ namespace SalesWinApp
             member.MdiParent = this;
             member.StartPosition = FormStartPosition.CenterParent;
             member.Show();
+        }
+
+        private void updateProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMemberAddUpdate update = new()
+            {
+                Title = "Update",
+                InsertOrUpdate = false,
+                Member = Member,
+            };
+            if (update.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("Update profile succeeded!");
+                update.Close();
+                Member = update.Member;
+            }
         }
     }
 }

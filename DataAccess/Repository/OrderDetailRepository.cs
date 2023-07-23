@@ -18,6 +18,7 @@ namespace DataAccess.Repository
         public void Delete(int productId, int orderId)
         {
             context.OrderDetails.Remove(Get(productId, orderId));
+            context.SaveChanges();
         }
 
         public OrderDetail Get(int productId, int orderId) => context.OrderDetails.Find(productId, orderId);

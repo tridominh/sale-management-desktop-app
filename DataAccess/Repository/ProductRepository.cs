@@ -18,6 +18,7 @@ namespace DataAccess.Repository
         public void Delete(int id)
         {
             context.Products.Remove(Get(id));
+            context.SaveChanges();
         }
 
         public Product Get(int id) => context.Products.Find(id);

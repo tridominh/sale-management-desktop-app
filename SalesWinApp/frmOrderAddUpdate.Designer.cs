@@ -35,20 +35,20 @@
             txtId = new TextBox();
             label6 = new Label();
             label7 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker3 = new DateTimePicker();
+            dtOrderDate = new DateTimePicker();
+            dtRequiredDate = new DateTimePicker();
+            dtShippedDate = new DateTimePicker();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtFreight = new TextBox();
             label3 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            cboMemberId = new ComboBox();
+            cboProductId = new ComboBox();
             label4 = new Label();
-            textBox2 = new TextBox();
+            txtUnitPrice = new TextBox();
             label8 = new Label();
-            textBox3 = new TextBox();
+            txtQuantity = new TextBox();
             label9 = new Label();
-            textBox4 = new TextBox();
+            txtDiscount = new TextBox();
             label10 = new Label();
             SuspendLayout();
             // 
@@ -115,26 +115,26 @@
             label7.TabIndex = 15;
             label7.Text = "RequiredDate";
             // 
-            // dateTimePicker1
+            // dtOrderDate
             // 
-            dateTimePicker1.Location = new Point(547, 93);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(241, 27);
-            dateTimePicker1.TabIndex = 16;
+            dtOrderDate.Location = new Point(547, 93);
+            dtOrderDate.Name = "dtOrderDate";
+            dtOrderDate.Size = new Size(241, 27);
+            dtOrderDate.TabIndex = 16;
             // 
-            // dateTimePicker2
+            // dtRequiredDate
             // 
-            dateTimePicker2.Location = new Point(547, 133);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(241, 27);
-            dateTimePicker2.TabIndex = 17;
+            dtRequiredDate.Location = new Point(547, 133);
+            dtRequiredDate.Name = "dtRequiredDate";
+            dtRequiredDate.Size = new Size(241, 27);
+            dtRequiredDate.TabIndex = 17;
             // 
-            // dateTimePicker3
+            // dtShippedDate
             // 
-            dateTimePicker3.Location = new Point(547, 178);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(241, 27);
-            dateTimePicker3.TabIndex = 19;
+            dtShippedDate.Location = new Point(547, 178);
+            dtShippedDate.Name = "dtShippedDate";
+            dtShippedDate.Size = new Size(241, 27);
+            dtShippedDate.TabIndex = 19;
             // 
             // label2
             // 
@@ -145,12 +145,12 @@
             label2.TabIndex = 20;
             label2.Text = "Freight";
             // 
-            // textBox1
+            // txtFreight
             // 
-            textBox1.Location = new Point(547, 230);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(241, 27);
-            textBox1.TabIndex = 21;
+            txtFreight.Location = new Point(547, 230);
+            txtFreight.Name = "txtFreight";
+            txtFreight.Size = new Size(241, 27);
+            txtFreight.TabIndex = 21;
             // 
             // label3
             // 
@@ -161,21 +161,23 @@
             label3.TabIndex = 22;
             label3.Text = "Member";
             // 
-            // comboBox1
+            // cboMemberId
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(152, 180);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(241, 28);
-            comboBox1.TabIndex = 23;
+            cboMemberId.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboMemberId.FormattingEnabled = true;
+            cboMemberId.Location = new Point(152, 180);
+            cboMemberId.Name = "cboMemberId";
+            cboMemberId.Size = new Size(241, 28);
+            cboMemberId.TabIndex = 23;
             // 
-            // comboBox2
+            // cboProductId
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(152, 135);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(241, 28);
-            comboBox2.TabIndex = 25;
+            cboProductId.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboProductId.FormattingEnabled = true;
+            cboProductId.Location = new Point(152, 135);
+            cboProductId.Name = "cboProductId";
+            cboProductId.Size = new Size(241, 28);
+            cboProductId.TabIndex = 25;
             // 
             // label4
             // 
@@ -186,12 +188,12 @@
             label4.TabIndex = 24;
             label4.Text = "Product";
             // 
-            // textBox2
+            // txtUnitPrice
             // 
-            textBox2.Location = new Point(152, 230);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(241, 27);
-            textBox2.TabIndex = 27;
+            txtUnitPrice.Location = new Point(152, 230);
+            txtUnitPrice.Name = "txtUnitPrice";
+            txtUnitPrice.Size = new Size(241, 27);
+            txtUnitPrice.TabIndex = 27;
             // 
             // label8
             // 
@@ -202,12 +204,12 @@
             label8.TabIndex = 26;
             label8.Text = "Unit Price";
             // 
-            // textBox3
+            // txtQuantity
             // 
-            textBox3.Location = new Point(152, 276);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(241, 27);
-            textBox3.TabIndex = 29;
+            txtQuantity.Location = new Point(152, 276);
+            txtQuantity.Name = "txtQuantity";
+            txtQuantity.Size = new Size(241, 27);
+            txtQuantity.TabIndex = 29;
             // 
             // label9
             // 
@@ -218,12 +220,12 @@
             label9.TabIndex = 28;
             label9.Text = "Quantity";
             // 
-            // textBox4
+            // txtDiscount
             // 
-            textBox4.Location = new Point(152, 323);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(241, 27);
-            textBox4.TabIndex = 31;
+            txtDiscount.Location = new Point(152, 323);
+            txtDiscount.Name = "txtDiscount";
+            txtDiscount.Size = new Size(241, 27);
+            txtDiscount.TabIndex = 31;
             // 
             // label10
             // 
@@ -239,21 +241,21 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox4);
+            Controls.Add(txtDiscount);
             Controls.Add(label10);
-            Controls.Add(textBox3);
+            Controls.Add(txtQuantity);
             Controls.Add(label9);
-            Controls.Add(textBox2);
+            Controls.Add(txtUnitPrice);
             Controls.Add(label8);
-            Controls.Add(comboBox2);
+            Controls.Add(cboProductId);
             Controls.Add(label4);
-            Controls.Add(comboBox1);
+            Controls.Add(cboMemberId);
             Controls.Add(label3);
-            Controls.Add(textBox1);
+            Controls.Add(txtFreight);
             Controls.Add(label2);
-            Controls.Add(dateTimePicker3);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtShippedDate);
+            Controls.Add(dtRequiredDate);
+            Controls.Add(dtOrderDate);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(txtId);
@@ -277,20 +279,20 @@
         private TextBox txtId;
         private Label label6;
         private Label label7;
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker3;
+        private DateTimePicker dtOrderDate;
+        private DateTimePicker dtRequiredDate;
+        private DateTimePicker dtShippedDate;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox txtFreight;
         private Label label3;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox cboMemberId;
+        private ComboBox cboProductId;
         private Label label4;
-        private TextBox textBox2;
+        private TextBox txtUnitPrice;
         private Label label8;
-        private TextBox textBox3;
+        private TextBox txtQuantity;
         private Label label9;
-        private TextBox textBox4;
+        private TextBox txtDiscount;
         private Label label10;
     }
 }

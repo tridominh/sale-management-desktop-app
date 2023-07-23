@@ -60,10 +60,16 @@ namespace SalesWinApp
                         frmMain main = new()
                         {
                             Role = 2,
-                            Member = user
+                            Member = user,
+                            login = this,
                         };
                         Hide();
-                        main.ShowDialog();
+                        if (main.ShowDialog() == DialogResult.Cancel)
+                        {
+                            txtEmail.Text = "";
+                            txtPassword.Text = "";
+                            main.Close();
+                        }
                     }
                 }
             }

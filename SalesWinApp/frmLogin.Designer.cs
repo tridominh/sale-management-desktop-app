@@ -88,8 +88,10 @@
             Controls.Add(txtEmail);
             Controls.Add(label2);
             Controls.Add(label1);
+            MaximizeBox = false;
             Name = "frmLogin";
-            Text = "frmLogin";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Login";
             Load += frmLogin_Load;
             ResumeLayout(false);
             PerformLayout();

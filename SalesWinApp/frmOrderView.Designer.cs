@@ -34,8 +34,10 @@
             btnDelete = new Button();
             btnClose = new Button();
             dataGridView1 = new DataGridView();
-            label1 = new Label();
-            textBox1 = new TextBox();
+            btnClearSearch = new Button();
+            btnSearchPrice = new Button();
+            txtSearch = new TextBox();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -77,6 +79,7 @@
             btnDelete.TabIndex = 3;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnClose
             // 
@@ -101,29 +104,51 @@
             dataGridView1.TabIndex = 5;
             dataGridView1.SizeChanged += dataGridView1_SizeChanged;
             // 
-            // label1
+            // btnClearSearch
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(65, 92);
-            label1.Name = "label1";
-            label1.Size = new Size(53, 20);
-            label1.TabIndex = 6;
-            label1.Text = "Search";
+            btnClearSearch.Location = new Point(665, 81);
+            btnClearSearch.Name = "btnClearSearch";
+            btnClearSearch.Size = new Size(94, 29);
+            btnClearSearch.TabIndex = 15;
+            btnClearSearch.Text = "Clear";
+            btnClearSearch.UseVisualStyleBackColor = true;
+            btnClearSearch.Click += btnClearSearch_Click;
             // 
-            // textBox1
+            // btnSearchPrice
             // 
-            textBox1.Location = new Point(170, 92);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(462, 27);
-            textBox1.TabIndex = 7;
+            btnSearchPrice.Location = new Point(320, 141);
+            btnSearchPrice.Name = "btnSearchPrice";
+            btnSearchPrice.Size = new Size(147, 29);
+            btnSearchPrice.TabIndex = 14;
+            btnSearchPrice.Text = "Search by UnitPrice";
+            btnSearchPrice.UseVisualStyleBackColor = true;
+            btnSearchPrice.Click += btnSearchPrice_Click;
+            // 
+            // txtSearch
+            // 
+            txtSearch.Location = new Point(165, 81);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(462, 27);
+            txtSearch.TabIndex = 13;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(60, 81);
+            label2.Name = "label2";
+            label2.Size = new Size(53, 20);
+            label2.TabIndex = 12;
+            label2.Text = "Search";
             // 
             // frmOrderView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(817, 474);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
+            Controls.Add(btnClearSearch);
+            Controls.Add(btnSearchPrice);
+            Controls.Add(txtSearch);
+            Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(btnClose);
             Controls.Add(btnDelete);
@@ -146,7 +171,9 @@
         private Button btnDelete;
         private Button btnClose;
         private DataGridView dataGridView1;
-        private Label label1;
-        private TextBox textBox1;
+        private Button btnClearSearch;
+        private Button btnSearchPrice;
+        private TextBox txtSearch;
+        private Label label2;
     }
 }

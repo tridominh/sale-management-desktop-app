@@ -13,8 +13,8 @@ namespace BusinessObject.DTO
 {
     public class OrderDTO
     {
-        public int Id { get; set; }
-        
+        public string? Id { get; set; }
+        public int ProductId { get; set; }
         public int MemberId { get; set; }
 
         [DisplayName("Order Date")]
@@ -28,7 +28,6 @@ namespace BusinessObject.DTO
 
         [Column(TypeName = "money")]
         public decimal Freight { get; set; }
-        public int ProductId { get; set; }
 
         [Column(TypeName = "money")]
         public decimal UnitPrice { get; set; }

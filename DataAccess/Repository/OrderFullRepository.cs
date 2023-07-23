@@ -1,7 +1,6 @@
-﻿using AutoMapper;
-using BusinessObject.DTO;
+﻿using BusinessObject.DTO;
 using BusinessObject.Entity;
-using BusinessObject.Profiles;
+using BusinessObject.Mapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +12,7 @@ namespace DataAccess.Repository
 {
     public class OrderFullRepository
     {
-        IMapper mapper = new MapperConfiguration(cfg =>
-        {
-            cfg.AddProfile(new OrderProfile());
-        }).CreateMapper();
-
+        OrderMapper mapper = new OrderMapper();
         OrderRepository orderRepository = new OrderRepository();
         OrderDetailRepository orderDetailRepository = new OrderDetailRepository();
         public IEnumerable<OrderDTO> GetAll()
@@ -26,11 +21,49 @@ namespace DataAccess.Repository
             foreach(OrderDetail detail in orderDetailRepository.GetAll())
             {
                 Order order = orderRepository.Get(detail.OrderId);
-                var orderFull = mapper.Map<Order,OrderDTO>(order);
-                orderFull = mapper.Map(detail, orderFull);
+                var orderFull = mapper.toOrderDTO(order, detail);
                 list.Add(orderFull);
             }
             return list;
+        }
+
+        public OrderDTO? Get(int oid, int pid)
+        {
+            return GetAll().Where(o => Convert.ToInt32(o.Id)==oid && o.ProductId==pid).FirstOrDefault();
+        }
+
+        public void Insert(OrderDTO orderDTO)
+        {
+            if (orderDTO != null)
+            {
+                Order order = mapper.toOrder(orderDTO);
+                orderRepository.Insert(order);
+                OrderDetail detail = mapper.toOrderDetail(orderDTO);
+                detail.OrderId = order.Id;
+                orderDetailRepository.Insert(detail);
+            }
+        }
+
+        public void Update(OrderDTO orderDTO)
+        {
+            if(orderDTO!= null) {
+                Order order = mapper.toOrder(orderDTO);
+                orderRepository.Update(order);
+                OrderDetail detail = mapper.toOrderDetail(orderDTO);
+                orderDetailRepository.Update(detail);
+            }
+        }
+
+        public void Delete(int oid, int pid)
+        {
+            var orderDTO = Get(oid, pid);
+            if (orderDTO != null)
+            {
+                Order order = mapper.toOrder(orderDTO);
+                OrderDetail detail = mapper.toOrderDetail(orderDTO);
+                orderRepository.Delete(order.Id);
+                orderDetailRepository.Delete(detail.ProductId, detail.OrderId);
+            }
         }
     }
 }

@@ -35,13 +35,15 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox5 = new TextBox();
-            numericUpDown1 = new NumericUpDown();
-            numericUpDown2 = new NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            txtCategoryId = new TextBox();
+            txtProductName = new TextBox();
+            txtId = new TextBox();
+            txtUnitInStock = new NumericUpDown();
+            txtUnitPrice = new NumericUpDown();
+            label6 = new Label();
+            txtWeight = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)txtUnitInStock).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtUnitPrice).BeginInit();
             SuspendLayout();
             // 
             // btnSave
@@ -85,7 +87,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(67, 181);
+            label3.Location = new Point(67, 170);
             label3.Name = "label3";
             label3.Size = new Size(104, 20);
             label3.TabIndex = 4;
@@ -94,7 +96,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(67, 258);
+            label4.Location = new Point(67, 233);
             label4.Name = "label4";
             label4.Size = new Size(56, 20);
             label4.TabIndex = 5;
@@ -103,57 +105,75 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(67, 324);
+            label5.Location = new Point(67, 284);
             label5.Name = "label5";
             label5.Size = new Size(92, 20);
             label5.TabIndex = 6;
             label5.Text = "Unit In Stock";
             // 
-            // textBox1
+            // txtCategoryId
             // 
-            textBox1.Location = new Point(200, 117);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(352, 27);
-            textBox1.TabIndex = 7;
+            txtCategoryId.Location = new Point(200, 117);
+            txtCategoryId.Name = "txtCategoryId";
+            txtCategoryId.Size = new Size(352, 27);
+            txtCategoryId.TabIndex = 7;
             // 
-            // textBox2
+            // txtProductName
             // 
-            textBox2.Location = new Point(200, 181);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(352, 27);
-            textBox2.TabIndex = 8;
+            txtProductName.Location = new Point(200, 170);
+            txtProductName.Name = "txtProductName";
+            txtProductName.Size = new Size(352, 27);
+            txtProductName.TabIndex = 8;
             // 
-            // textBox5
+            // txtId
             // 
-            textBox5.Location = new Point(200, 62);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(352, 27);
-            textBox5.TabIndex = 11;
+            txtId.Location = new Point(200, 62);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(352, 27);
+            txtId.TabIndex = 11;
             // 
-            // numericUpDown1
+            // txtUnitInStock
             // 
-            numericUpDown1.Location = new Point(200, 251);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(352, 27);
-            numericUpDown1.TabIndex = 12;
+            txtUnitInStock.Location = new Point(200, 284);
+            txtUnitInStock.Name = "txtUnitInStock";
+            txtUnitInStock.Size = new Size(352, 27);
+            txtUnitInStock.TabIndex = 13;
             // 
-            // numericUpDown2
+            // txtUnitPrice
             // 
-            numericUpDown2.Location = new Point(200, 324);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(352, 27);
-            numericUpDown2.TabIndex = 13;
+            txtUnitPrice.Location = new Point(200, 343);
+            txtUnitPrice.Name = "txtUnitPrice";
+            txtUnitPrice.Size = new Size(352, 27);
+            txtUnitPrice.TabIndex = 15;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(67, 343);
+            label6.Name = "label6";
+            label6.Size = new Size(72, 20);
+            label6.TabIndex = 14;
+            label6.Text = "Unit Price";
+            // 
+            // txtWeight
+            // 
+            txtWeight.Location = new Point(200, 230);
+            txtWeight.Name = "txtWeight";
+            txtWeight.Size = new Size(352, 27);
+            txtWeight.TabIndex = 16;
             // 
             // frmProductAddUpdate
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(numericUpDown2);
-            Controls.Add(numericUpDown1);
-            Controls.Add(textBox5);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtWeight);
+            Controls.Add(txtUnitPrice);
+            Controls.Add(label6);
+            Controls.Add(txtUnitInStock);
+            Controls.Add(txtId);
+            Controls.Add(txtProductName);
+            Controls.Add(txtCategoryId);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -164,8 +184,8 @@
             Name = "frmProductAddUpdate";
             Text = "frmAddUpdate";
             Load += frmAddUpdate_Load;
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtUnitInStock).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtUnitPrice).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -179,10 +199,12 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox5;
-        private NumericUpDown numericUpDown1;
-        private NumericUpDown numericUpDown2;
+        private TextBox txtCategoryId;
+        private TextBox txtProductName;
+        private TextBox txtId;
+        private NumericUpDown txtUnitInStock;
+        private NumericUpDown txtUnitPrice;
+        private Label label6;
+        private TextBox txtWeight;
     }
 }
