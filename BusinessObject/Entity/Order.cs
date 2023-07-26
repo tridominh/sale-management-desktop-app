@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,7 @@ namespace BusinessObject.Entity
         public DateTime ShippedDate { get; set; }
 
         [Column(TypeName = "money")]
+        [Precision(18, 2)]
         public decimal Freight { get; set; }
         public virtual Member Member { get; set; } = null!;
         public virtual ICollection<OrderDetail>? OrderDetails { get; set; }

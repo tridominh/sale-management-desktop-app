@@ -100,8 +100,9 @@
             // viewReportsToolStripMenuItem
             // 
             viewReportsToolStripMenuItem.Name = "viewReportsToolStripMenuItem";
-            viewReportsToolStripMenuItem.Size = new Size(175, 26);
+            viewReportsToolStripMenuItem.Size = new Size(224, 26);
             viewReportsToolStripMenuItem.Text = "View reports";
+            viewReportsToolStripMenuItem.Click += viewReportsToolStripMenuItem_Click;
             // 
             // profileToolStripMenuItem
             // 

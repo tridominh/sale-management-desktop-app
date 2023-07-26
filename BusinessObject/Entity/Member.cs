@@ -10,9 +10,9 @@ namespace BusinessObject.Entity
     public class Member
     {
         public int Id { get; set; }
-        
-        [StringLength(100)]
-        [EmailAddress]
+
+        [RegularExpression("^[a-z0-9_\\+-]+(\\.[a-z0-9_\\+-]+)*@[a-z0-9-]+(\\.[a-z0-9]+)*\\.([a-z]{2,4})$", ErrorMessage = "Invalid email format.")]
+        [Required(ErrorMessage = "Please enter your e-mail address."), StringLength(50)]
         public string Email { get; set; } = null!;
 
         [StringLength(40)]

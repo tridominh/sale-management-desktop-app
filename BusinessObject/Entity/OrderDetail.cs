@@ -18,12 +18,14 @@ namespace BusinessObject.Entity
         public int ProductId { get; set; }
 
         [Column(TypeName = "money")]
+        [Precision(18, 2)]
         public decimal UnitPrice { get; set; }
 
         public int Quantity { get; set; }
 
-        [Column(TypeName = "float")]
-        public float Discount { get; set; }
+        [Precision(3,2)]
+        [Range(0,1)]
+        public decimal Discount { get; set; }
 
         public virtual Order Order { get; set; } = null!;
         public virtual Product Product { get; set; } = null!;

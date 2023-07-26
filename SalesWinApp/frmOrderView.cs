@@ -54,7 +54,7 @@ namespace SalesWinApp
             }
             if (searchString != null)
             {
-                orders = orders.Where(m => m.UnitPrice.ToString().Contains(searchString));
+                orders = orders.Where(m => m.UnitPrice.ToString().Equals(searchString));
             }
             source.DataSource = orders;
 

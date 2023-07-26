@@ -91,5 +91,11 @@ namespace SalesWinApp
                 Member = update.Member;
             }
         }
+
+        private void viewReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmViewSaleReport viewSale = new();
+            viewSale.ShowDialog();
+        }
     }
 }

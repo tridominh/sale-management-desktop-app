@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace BusinessObject.DTO
 {
@@ -27,14 +28,18 @@ namespace BusinessObject.DTO
         public DateTime ShippedDate { get; set; }
 
         [Column(TypeName = "money")]
+        [Precision(18, 2)]
         public decimal Freight { get; set; }
 
         [Column(TypeName = "money")]
+        [Precision(18, 2)]
         public decimal UnitPrice { get; set; }
 
+        [Precision(3, 2)]
+        [Range(0, 1)]
         public int Quantity { get; set; }
 
         [Column(TypeName = "float")]
-        public float Discount { get; set; }
+        public decimal Discount { get; set; }
     }
 }

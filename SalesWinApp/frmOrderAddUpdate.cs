@@ -54,7 +54,7 @@ namespace SalesWinApp
                     MemberId = Convert.ToInt32(cboMemberId.Text),
                     UnitPrice = Convert.ToDecimal(txtUnitPrice.Text),
                     Quantity = Convert.ToInt32(txtQuantity.Text),
-                    Discount = (float)Convert.ToDouble(txtDiscount.Text),
+                    Discount = Convert.ToDecimal(txtDiscount.Text),
                     OrderDate = dtOrderDate.Value,
                     RequiredDate = dtRequiredDate.Value,
                     ShippedDate = dtShippedDate.Value,
